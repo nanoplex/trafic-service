@@ -1,0 +1,104 @@
+body, html, form {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+}
+
+google-map {
+	width: 100%;
+}
+
+#sound {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	z-index: 1;
+	width: 2em;
+}
+
+#warning {
+	position: fixed;
+	bottom: 1em;
+	left: 1em;
+	line-height: 0.29;
+	font-size: 1.7em;
+	color: white;
+	background: #F44336;
+	padding: 1.02em;
+	border-radius: 50%;
+	transition: .3s;
+	animation: show .3s linear 0 1;
+	-webkit-animation: show .3s linear 0 1;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+	transform: scale(0) !important;
+	-webkit-transform: scale(0) !important;
+	animation-duration: 0 !important;
+	-webkit-animation-duration: 0 !important;
+}
+
+.level2 {
+	bottom: 340px !important;
+	left: 33% !important;
+	font-size: 2em !important;
+	padding: 2em !important;
+	animation-name: alert !important;
+	-webkit-animation-name: alert !important;
+	animation-iteration-count: infinite !important;
+	-webkit-animation-iteration-count: infinite !important;
+}
+
+#add, #done {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	line-height: 0.6;
+	color: white;
+	background: #616161;
+	padding: 1em;
+	transition: .3s;
+	font-size: 1.5em;
+	border-radius: 50%;
+	animation: show .3s linear 0 1;
+	-webkit-animation: show .3s linear 0 1;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+#done {
+	background-color: #4CAF50 !important;
+	padding: 0.8em !important;
+}
+
+#status {
+	position: fixed;
+	top: 40px;
+	left: 115px;
+	z-index: 1;
+	background: rgba(0,0,0,0.2);
+	border-radius: 50%;
+	transition: .3s;
+}
+#status img {
+	padding: 1.5em 1.5em 1.25em 1.5em;
+	width: 5em;
+}
+
+@keyframes show {
+	from { transform: scale(0); }
+	to { transform: scale(1);}
+}
+@-webkit-keyframes show {
+	from { -webkit-transform: scale(0); }
+	to { -webkit-transform: scale(1);}
+}
+
+@keyframes alert {
+	from { box-shadow: 0 0 5px 5px #F44336; }
+	to { box-shadow: 0; }
+}
+@-webkit-keyframes alert {
+	from { box-shadow: 0 0 5px 5px #F44336; }
+	to { box-shadow: 0; }
+}
