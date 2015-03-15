@@ -1,0 +1,9 @@
+*.suo
+*.sln
+*.csproj
+*.user
+App_Data/
+bin/
+obj/
+Properties/
+packages/
